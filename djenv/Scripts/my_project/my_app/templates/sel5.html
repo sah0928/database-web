@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+</head>
+<body>
+    <p1><b>Dependent Table</b></p1>
+    <table border="1px">
+        <tr>
+            <td>Essn</td>
+            <td>Dependent_name</td>
+            <td>Sex</td>
+            <td>Bdate</td>
+            <td>Relationship</td>
+        </tr>
+        {% for cur in res %}
+        <tr>
+            <td>{{cur.e_ssn_id}}</td>
+            <td>{{cur.dependent_name}}</td>
+            <td>{{cur.sex}}</td>
+            <td>{{cur.b_date}}</td>
+            <td>{{cur.relationship}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/dependent" method="GET">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>

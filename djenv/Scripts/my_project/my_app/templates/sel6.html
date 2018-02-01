@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+</head>
+<body>
+    <p1><b>WorksOn Table</b></p1>
+    <table border="1px">
+        <tr>
+            <td>Essn</td>
+            <td>Pno</td>
+            <td>Hours</td>
+        </tr>
+        {% for cur in res %}
+        <tr>
+            <td>{{cur.e_ssn_id}}</td>
+            <td>{{cur.pno_id}}</td>
+            <td>{{cur.hours}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/workson" method="GET">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>

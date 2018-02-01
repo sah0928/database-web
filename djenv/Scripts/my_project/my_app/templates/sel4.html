@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+</head>
+<body>
+    <p1><b>Project Table</b></p1>
+    <table border="1px">
+        <tr>
+            <td>Pname</td>
+            <td>Pnumber</td>
+            <td>Plocation</td>
+            <td>Dnumber</td>
+        </tr>
+
+        {% for cur in res %}
+        <tr>
+            <td>{{cur.p_name}}</td>
+            <td>{{cur.p_number}}</td>
+            <td>{{cur.p_location}}</td>
+            <td>{{cur.d_number_id}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <form action="/project" method="GET">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>

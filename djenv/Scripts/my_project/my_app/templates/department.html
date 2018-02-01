@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Department</title>
+    <style>
+        p1, div{ margin-right:5px; float:left; }
+    </style>
+</head>
+<body>
+    <p1><b>Table List</b></p1>
+    <div><form action="/" method="GET">
+        <button type="submit">employee</button>
+    </form></div>
+
+    <div><form action="/deplocation" method="GET">
+        <button type="submit">deplocation</button>
+    </form></div>
+
+    <div><form action="/project" method="GET">
+        <button type="submit">project</button>
+    </form></div>
+
+    <div><form action="/dependent" method="GET">
+        <button type="submit">dependent</button>
+    </form></div>
+
+    <form action="/workson" method="GET">
+        <button type="submit">workson</button>
+    </form>
+
+    <label><b>-Department-</b></label>
+    <form method="POST"> {% csrf_token %}
+        {{ form.as_p }}
+        <div><button type="submit">insert or update</button></div>
+    </form>
+
+    <div><form action="/sel2" method="GET">
+        <button type="submit">sel</button>
+    </form></div>
+    <form action="/init" method="GET">
+        <button type="submit">init</button>
+    </form>
+
+    <form action="/delete_department" method="POST"> {% csrf_token %}
+        <label><b>D number</b></label>
+        <input name="title" type="text" placeholder="삭제할 D number 입력">
+      <button type="submit" class="btn btn-default">delete</button>
+    </form>
+</body>
+</html>

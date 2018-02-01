@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+</head>
+<body>
+    <p1><b>Department Table</b></p1>
+    <table border="1px">
+        <tr>
+            <td>Dname</td>
+            <td>Dnumber</td>
+            <td>Mgr_ssn</td>
+            <td>Mgr_start_date</td>
+        </tr>
+        {% for cur in res %}
+        <tr>
+            <td>{{cur.d_name}}</td>
+            <td>{{cur.d_number}}</td>
+            <td>{{cur.mgr_ssn_id}}</td>
+            <td>{{cur.mgr_start_date}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/department" method="GET">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>

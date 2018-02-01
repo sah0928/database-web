@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+</head>
+<body>
+    <p1><b>DeptLocation Table</b></p1>
+    <table border="1px">
+        <tr>
+            <td>Dnumber</td>
+            <td>Dlocation</td>
+        </tr>
+
+        {% for cur in res %}
+        <tr>
+            <td>{{cur.d_number_id}}</td>
+            <td>{{cur.d_location}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <form action="/deplocation" method="GET">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>

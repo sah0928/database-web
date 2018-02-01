@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+</head>
+<body>
+    <p1><b>Employee Table</b></p1>
+    <table border="1px">
+        <tr>
+            <td>fname</td>
+            <td>Minit</td>
+            <td>Lname</td>
+            <td>Ssn</td>
+            <td>Bdate</td>
+            <td>Address</td>
+            <td>Sex</td>
+            <td>Salary</td>
+            <td>Super_ssn</td>
+            <td>Dnumber</td>
+        </tr>
+        {% for cur in res %}
+        <tr>
+            <td>{{cur.f_name}}</td>
+            <td>{{cur.m_init}}</td>
+            <td>{{cur.l_name}}</td>
+            <td>{{cur.ssn}}</td>
+            <td>{{cur.b_date}}</td>
+            <td>{{cur.address}}</td>
+            <td>{{cur.sex}}</td>
+            <td>{{cur.salary}}</td>
+            <td>{{cur.super_ssn_id}}</td>
+            <td>{{cur.d_number_id}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/" method="GET">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>
